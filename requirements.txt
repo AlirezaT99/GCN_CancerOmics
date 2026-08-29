@@ -1,0 +1,10 @@
+# Stages 1 and 2 (preprocessing and integration).
+#
+# pandas is capped below 2.0 deliberately: the pipeline uses DataFrame.iteritems(),
+# which was deprecated in 1.5 and removed in 2.0.
+numpy>=1.21
+pandas>=1.3,<2.0
+tqdm>=4.62
+
+# Stage 3 runs inside MOGONET (https://github.com/txWang/MOGONET) and uses that
+# project's own dependencies (PyTorch, scikit-learn). Install them from there.
